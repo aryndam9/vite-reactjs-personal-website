@@ -1,0 +1,36 @@
+@import './css/variables.css';
+@import './css/font.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+  html {
+    box-sizing: border-box;
+  }
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+  body {
+    margin: 0 20px;
+    padding: 0;
+    font-family: 'Fira Code', Monaco, Consolas, Ubuntu Mono, monospace;
+    font-size: 1rem;
+    line-height: 1.54;
+    letter-spacing: -0.02em;
+    background-color: var(--background);
+    color: var(--color);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    font-feature-settings: "liga", "tnum", "case", "calt", "zero", "ss01", "locl";
+    font-variant-ligatures: contextual;
+    -webkit-overflow-scrolling: touch;
+    -webkit-text-size-adjust: 100%;
+  }
+}

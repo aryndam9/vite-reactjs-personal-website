@@ -1,0 +1,12 @@
+:root {
+    --accent: #FFA86A;
+    --background: rgb(34, 33, 41);
+    --color: white;
+    --border-color: rgba(255, 255, 255, .1);
+    --shadow-color: rgba(34, 33, 41, 0.8);
+    --shadow: 0 10px var(--shadow-color), -10px 10px var(--shadow-color), 10px 10px var(--shadow-color);
+  
+    /* variables for js, must be the same as these in @custom-media queries */
+    --phoneWidth: (max-width: 684px);
+    --tabletWidth: (max-width: 900px);
+  }

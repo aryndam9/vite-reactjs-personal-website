@@ -1,0 +1,12 @@
+.home-container {
+    width: 100%;
+    max-width: 945px;
+    margin: 4rem auto;
+}
+.section-divider {
+    display: block;
+    width: 100%;
+    background: var(--color);
+    height: 4px;
+    margin: 2rem 0 2rem;
+}

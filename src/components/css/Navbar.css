@@ -1,0 +1,184 @@
+/* logo animation */
+.logo-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.logo-container::after {
+    content: "";
+    position: absolute; 
+    height: 100%;
+    left: 20%;
+    background: repeating-linear-gradient(90deg, var(--accent), var(--accent) 4px, transparent 0, transparent 10px);
+    animation: cursor 3s forwards;
+    animation-timing-function: ease-in-out;
+    z-index: 1;
+    box-sizing: inherit;  
+}
+
+.logo-container a {
+    text-decoration: none;
+}
+
+.logo, .logo-bg-div {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    background: var(--accent);
+    color: #000;
+    white-space: nowrap;
+}
+.logo {
+    padding: 5px 10px;
+    z-index: 3;
+}
+.logo-bg-div {
+    z-index: 2;
+}
+
+.blinkLogo {
+    font-weight: 800;
+    padding-right: 5px;
+    animation: blink 1.5s infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes blink {
+    0% {
+        color: var(--accent);
+    }
+    100% {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@keyframes cursor {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 80%;
+    }
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 945px;
+    margin: 2rem auto;
+}
+
+.menu--desktop {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.menu--desktop li {
+    display: inline;
+    margin-right: 1.5rem;
+}
+
+.menu--desktop li a {
+    text-decoration: none;
+    color: var(--color);
+    text-decoration: underline;
+}
+
+.menu--desktop li a:hover {
+    color: var(--accent);
+}
+
+/* menu button  */
+  .menu-button {
+    display: none;
+    background-color: var(--background);
+    font-size: 1rem;
+    color: var(--accent);
+    border: 2px solid;
+    margin-left: auto;
+    height: 100%;
+    padding: 3px 15px;
+    position: relative;
+    cursor: pointer;
+    z-index: 3;
+  }
+  
+  .menu--mobile {
+    display: none;
+  }
+
+@media only screen and (max-width: 684px) {
+    .menu--desktop {
+        display: none; /* Hide the desktop menu */
+      }
+    
+      .menu-button {
+        display: block; /* Show the menu button */
+        margin-left: auto; /* Keep button right-aligned */
+      }
+    
+      /* Menu Styles - Now within the Media Query */
+      .menu--mobile {
+        display: none; 
+        width: auto; /* Let the content determine the width */
+        min-width: 150px; /* Minimum width for usability */
+        flex-direction: column;
+        background-color: rgb(162, 56, 3);
+        border: 2px solid;
+        box-shadow: var(--shadow);
+        z-index: 99; 
+        position: fixed; /* Or absolute, depending on your structure */
+        top: 65px;
+        right: 0; /* Align the menu to the right */
+        padding: 10px;
+        margin-right: 20px;
+        list-style: none;
+      }
+      .menu--mobile {
+        display: none;
+        width: auto; /* Let the content determine the width */
+        min-width: 150px; /* Minimum width for usability */
+        flex-direction: column;
+        background-color: rgb(162, 56, 3);
+        border: 2px solid;
+        box-shadow: var(--shadow);
+        z-index: 99; 
+        position: fixed; /* Or absolute, depending on your structure */
+        top: 65px;
+        right: 0; /* Align the menu to the right */
+        padding: 10px;
+        margin-right: 20px;
+        list-style: none;
+      }
+    
+      .menu--mobile li {
+        display: inline;
+        margin-bottom: 1rem;
+      }
+    
+      .menu--mobile li a {
+        text-decoration: none;
+        color: var(--color);
+        text-decoration: underline;
+      }
+    
+      .menu--mobile li a:hover {
+        color: var(--accent);
+    }
+      
+      /* When the menu is displayed */
+      .menu--mobile.show { 
+        display: flex;
+      } 
+  }

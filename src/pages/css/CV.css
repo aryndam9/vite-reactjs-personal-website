@@ -1,0 +1,90 @@
+.cv-container {
+    width: 100%;
+    max-width: 945px;
+    margin: 4rem auto;
+    padding: 20px;
+    color: var(--color);
+  }
+  
+  .cv-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--accent);
+  }
+  
+  .cv-accordion {
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+  
+  .cv-accordion .AccordionItem {
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .cv-accordion .AccordionTrigger {
+    font-family: inherit;
+    background-color: var(--background);
+    color: var(--color);
+    padding: 16px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    outline: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cv-accordion .AccordionTrigger:hover {
+    background-color: rgba(255, 168, 106, 0.1);
+  }
+  
+  .cv-accordion .AccordionContent {
+    background-color: var(--background);
+    padding: 20px;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .section-content {
+    margin-bottom: 20px;
+  }
+  
+  .section-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--accent);
+  }
+  
+  .section-content p {
+    margin-bottom: 10px;
+  }
+  
+  .section-content ul {
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+  
+  .section-content li {
+    margin-bottom: 8px;
+  }
+  
+  .section-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .section-content th,
+  .section-content td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .section-content th {
+    background-color: var(--accent);
+    color: var(--background);
+  }
