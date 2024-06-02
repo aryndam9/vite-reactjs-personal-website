@@ -13,42 +13,43 @@
   }
   
   .cv-accordion {
+    --accordion-background: #f0f0f0;
+    --accordion-color: #333;
+    --accordion-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    
     border-radius: 6px;
     overflow: hidden;
-    box-shadow: var(--shadow);
+    box-shadow: var(--accordion-shadow);
   }
   
   .cv-accordion .AccordionItem {
     border-bottom: 1px solid var(--border-color);
   }
   
-  .cv-accordion .AccordionTrigger {
-    font-family: inherit;
-    background-color: var(--background);
-    color: var(--color);
-    padding: 16px;
-    font-size: 1.2rem;
-    font-weight: 600;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    text-align: left;
-    outline: none;
-    transition: background-color 0.3s ease;
+  .accordion-div {
+    background: linear-gradient(135deg, rgba(255, 168, 106, 0.2), rgba(255, 168, 106, 0.05));
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
   }
   
-  .cv-accordion .AccordionTrigger:hover {
-    background-color: rgba(255, 168, 106, 0.1);
+  .accordion-div:hover {
+    background: linear-gradient(135deg, rgba(255, 168, 106, 0.3), rgba(255, 168, 106, 0.1));
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
   }
+  
   
   .cv-accordion .AccordionContent {
-    background-color: var(--background);
+    background-color: var(--accordion-background);
     padding: 20px;
     font-size: 1rem;
     line-height: 1.6;
   }
   
   .section-content {
+    margin-top: 20px;
     margin-bottom: 20px;
   }
   

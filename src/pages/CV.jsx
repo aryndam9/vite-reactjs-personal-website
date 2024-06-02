@@ -1,54 +1,59 @@
 import React from 'react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import './css/CV.css';
+import { Link } from '@phosphor-icons/react'
+
+const createIconLink = (url) => {
+  return (
+    <a href={url} target="_blank" rel="noopener noreferrer" className="icon-link">
+      <Link size={32} color="#ffa86a" weight="duotone" style={{ display: 'inline',  marginLeft: '8px' }} />
+    </a>
+  );
+};
+
+const txtHighlight = (text) => {
+  return <div className='txt-highlight'>{text}</div>;
+}
 
 const CV = () => {
   return (
     <div className="cv-container">
       <h1>Curriculum Vitae</h1>
 
-      <Accordion type="single" collapsible className="cv-accordion">
-        {/* Education */}
-        <AccordionItem value="education">
-          <AccordionTrigger>Education</AccordionTrigger>
-          <AccordionContent>
-            <div className="section-content">
-              <h3>Barcelona Institute of Science and Technology, Barcelona, Spain</h3>
-              <p>2022 - 2023</p>
-              <p>Master of Multidisciplinary Research in Experimental Sciences (MMRES)</p>
-              <p>CGPA: 8.4/10</p>
-              <p>Thesis - Optimizing Proton Tracking and Energy Determination for Improved Proton CT Imaging</p>
-
-              <h3>Amity University, Noida, India</h3>
-              <p>2020 - 2022</p>
-              <p>Master of Technology (M.Tech)</p>
-              <p>CGPA: 9.43/10</p>
-              <p>Specialization - Computer Science and Engineering</p>
-
-              <h3>University of Mumbai- Department of Atomic Energy- Center for excellence in Basic Science (UM DAE CEBS), India</h3>
-              <p>2015 - 2020</p>
-              <p>Integrated Master of Science (B.Sc and M.Sc)</p>
-              <p>CGPA: 6.26/10</p>
-              <p>Specialization - Mathematics</p>
-            </div>
-          </AccordionContent>
-        </AccordionItem>
-
+      <Accordion type="single" collapsible className="cv-accordion" defaultValue='awards'>
         {/* Fellowships and Awards */}
         <AccordionItem value="awards">
-          <AccordionTrigger>Fellowships and Awards</AccordionTrigger>
+          <AccordionTrigger className='accordion-div'>Fellowships and Awards</AccordionTrigger>
           <AccordionContent>
             <div className="section-content">
               <ul>
-                <li>Awarded 1st Place in the 2023 Telespazio Technology Contest (Italy) for the ESTESIA project, including EUR 10,000 prize and Seraphim Space Accelerator program.</li>
-                <li>Fellowship to cover Living expenses - Institut de Física d'Altes Energies (IFAE), Barcelona, Spain, 2022-2023.</li>
-                <li>BIST-Full Tuition fee waiver Fellowship - Barcelona Institute of Science and Technology(BIST)- Universitat Pompeu Fabra(UPF), Spain, 2022-2023.</li>
-                <li>Panelist at the NASA Transform to Open Science (TOPS) April Forum.</li>
-                <li>NASA SpaceApps Challange 2022 Global Finalist - We were among the top 35 out of 5,327 teams and 31,561 participants.</li>
-                <li>Silver Medalist - Amity University, India - 2022.</li>
-                <li>Smart India Hackathon 2022 Winners - ISRO's Problem statement: Deep Learning based Cyclone Intensity estimation using INSAT-3D IR imagery.</li>
-                <li>DST-INSPIRE Fellowship - Department of Science and Technology (DST), Government of India, 2015-2017.</li>
-                <li>Qualified National Entrance Screening Test (NEST 2015) - Selected for UM DAE CEBS, India.</li>
+                <li>
+                  Awarded 1st Place in {txtHighlight('#T-TeC 2023 - Telespazio Technology contest')} (Italy) for the 'ESTESIA' project, including EUR 10,000 prize and invitation to Seraphim Space Accelerator program.{createIconLink('https://www.telespazio.com/en/innovation/t-tec-2023')}
+                </li>
+                <li>
+                  Received a {txtHighlight('Fellowship')} to cover Living expenses by Institut de Física d'Altes Energies (IFAE), Barcelona, Spain, 2022-2023.
+                </li>
+                <li>
+                  {txtHighlight('Full Tuition fee waiver Fellowship')} by Barcelona Institute of Science and Technology (BIST)- Universitat Pompeu Fabra (UPF), Spain, 2022-2023.
+                </li>
+                <li>
+                  {txtHighlight('Invited Panelist')} at the NASA Transform to Open Science (TOPS) April Forum.{createIconLink('https://docs.google.com/viewer?url=https://raw.githubusercontent.com/aryndam9/nasa-spaceappschallenge/main/NASA_TOPS_Forum_Participation_Metrics.pdf')}
+                </li>
+                <li>
+                  {txtHighlight('NASA SpaceApps Challenge 2022 Global Finalist')} - We were among the top 35 out of 5,327 teams and 31,561 participants. {createIconLink('https://2022.spaceappschallenge.org/challenges/2022-challenges/measuring-open-science/teams/the-open-metric/project')}
+                </li>
+                <li>
+                  {txtHighlight('Silver Medalist')} - Amity University, India - 2022.
+                </li>
+                <li>
+                  {txtHighlight('Smart India Hackathon 2022 Winners')} - ISRO's Problem statement: Deep Learning based Cyclone Intensity estimation using INSAT-3D IR imagery. {createIconLink('https://www.linkedin.com/posts/arindam-ghosh96_smartindiahackathon2022-sih2022-hackathon-activity-6971169844272476160-Y0QR')}
+                </li>
+                <li>
+                  {txtHighlight('DST-INSPIRE Fellowship')} - Department of Science and Technology (DST), Government of India, 2015-2017.
+                </li>
+                <li>
+                Qualified {txtHighlight('National Entrance Screening Test (NEST 2015)')} - Selected for UM DAE CEBS, India.
+                </li>
               </ul>
             </div>
           </AccordionContent>
@@ -56,7 +61,7 @@ const CV = () => {
 
         {/* Research Experience */}
         <AccordionItem value="research">
-          <AccordionTrigger>Research Experience</AccordionTrigger>
+          <AccordionTrigger className='accordion-div'>Research Experience</AccordionTrigger>
           <AccordionContent>
             <div className="section-content">
               <p>A. Ghosh and S. Thakur, "Review of Brain Tumor MRI Image Segmentation Methods for BraTS Challenge Dataset," in 2022 12th International Conference on Cloud Computing, Data Science & Engineering (Confluence), Noida, India, Jan. 2022, pp. 405–410.DOI</p>
@@ -108,7 +113,7 @@ const CV = () => {
 
         {/* Professional Experience */}
         <AccordionItem value="professional">
-          <AccordionTrigger>Professional Experience</AccordionTrigger>
+          <AccordionTrigger className='accordion-div'>Professional Experience</AccordionTrigger>
           <AccordionContent>
             <div className="section-content">
               <h3>Estesia - Smart Analytics, Chile (Nov 2023 - Present)</h3>
@@ -126,9 +131,35 @@ const CV = () => {
           </AccordionContent>
         </AccordionItem>
 
+        {/* Education */}
+        <AccordionItem value="education">
+          <AccordionTrigger className='accordion-div'>Education</AccordionTrigger>
+          <AccordionContent>
+            <div className="section-content">
+              <h3>Barcelona Institute of Science and Technology, Barcelona, Spain</h3>
+              <p>2022 - 2023</p>
+              <p>Master of Multidisciplinary Research in Experimental Sciences (MMRES)</p>
+              <p>CGPA: 8.4/10</p>
+              <p>Thesis - Optimizing Proton Tracking and Energy Determination for Improved Proton CT Imaging</p>
+
+              <h3>Amity University, Noida, India</h3>
+              <p>2020 - 2022</p>
+              <p>Master of Technology (M.Tech)</p>
+              <p>CGPA: 9.43/10</p>
+              <p>Specialization - Computer Science and Engineering</p>
+
+              <h3>University of Mumbai- Department of Atomic Energy- Center for excellence in Basic Science (UM DAE CEBS), India</h3>
+              <p>2015 - 2020</p>
+              <p>Integrated Master of Science (B.Sc and M.Sc)</p>
+              <p>CGPA: 6.26/10</p>
+              <p>Specialization - Mathematics</p>
+            </div>
+          </AccordionContent>
+        </AccordionItem>
+
         {/* Conference and Workshops */}
         <AccordionItem value="conferences">
-          <AccordionTrigger>Conference and Workshops</AccordionTrigger>
+          <AccordionTrigger className='accordion-div'>Conference and Workshops</AccordionTrigger>
           <AccordionContent>
             <div className="section-content">
               <ul>
@@ -146,7 +177,7 @@ const CV = () => {
 
         {/* Other Achievements and Extra-Curricular Activities */}
         <AccordionItem value="achievements">
-          <AccordionTrigger>Other Achievements and Extra-Curricular Activities</AccordionTrigger>
+          <AccordionTrigger className='accordion-div'>Other Achievements and Extra-Curricular Activities</AccordionTrigger>
           <AccordionContent>
             <div className="section-content">
               <ul>
@@ -167,7 +198,7 @@ const CV = () => {
 
         {/* Relevant Courses */}
         <AccordionItem value="courses">
-          <AccordionTrigger>Relevant Courses</AccordionTrigger>
+          <AccordionTrigger className='accordion-div'>Relevant Courses</AccordionTrigger>
           <AccordionContent>
             <div className="section-content">
               <h3>Core Courses</h3>
@@ -206,7 +237,7 @@ const CV = () => {
 
         {/* Technical Strengths */}
         <AccordionItem value="skills">
-          <AccordionTrigger>Technical Strengths</AccordionTrigger>
+          <AccordionTrigger className='accordion-div'>Technical Strengths</AccordionTrigger>
           <AccordionContent>
             <div className="section-content">
               <table>
