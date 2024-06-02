@@ -11,13 +11,4 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  build: {
-    outDir: 'dist',
-    rollupOptions: {
-      input: {
-        main: 'index.html',
-        404: './public/404.html',
-      },
-    },
-  },
 })
