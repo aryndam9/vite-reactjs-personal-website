@@ -132,7 +132,7 @@ const CV = () => {
         </AccordionItem>
 
         {/* Education */}
-        <AccordionItem value="education">
+        {/* <AccordionItem value="education">
           <AccordionTrigger className='accordion-div'>Education</AccordionTrigger>
           <AccordionContent>
             <div className="section-content">
@@ -155,7 +155,7 @@ const CV = () => {
               <p>Specialization - Mathematics</p>
             </div>
           </AccordionContent>
-        </AccordionItem>
+        </AccordionItem> */}
 
         {/* Conference and Workshops */}
         <AccordionItem value="conferences">

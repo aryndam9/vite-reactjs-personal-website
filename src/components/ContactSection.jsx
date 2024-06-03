@@ -25,7 +25,7 @@ const ContactSection = () => {
             </a>
           </li>
           <li>
-            Email: arindamghosh(dot)work(at)gmail(dot)com
+            Email: contact@arindam.info
           </li>
         </ul>
       </div>
